@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Registration</title>
+<link rel="stylesheet" href="styles_new.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+  <meta name="description" content="Art Shop">
+  <meta name="keywords" content="HTML, CSS, art shop, landscape, nature, pictures, paints">
+  <meta name="author" content="Hanna Kukhta">
+ 
+</head>
+<body>
+<div class="bg-image"></div>
+<div class="bg-text">
+
+<h1>Welcome to Whales Tales Art Shop Registration page!</h1>
+
+<p> <button onclick="document.location='index.html'"> Home</button>						<!-- Home page -->
+<button onclick="document.location='login.html'"> Login</button>						<!-- Login page -->
+<button onclick="document.location='registration.html'"> Registration</button>			<!-- Registration page -->
+<button onclick="document.location='ShopDisplay.html'"> Gallery</button>				<!-- Gallery / Shop display page -->
+<button onclick="document.location='slideshow.html'"> Slideshow</button></p>			<!-- Slideshow page -->
+
+	
+	<h2>Welcome to registration</h2>
+  
+    <form action="RegistrationServlet" method="get" class="form">
+		<!-- Start of form-->
+
+		
+		<p>Please enter your details in the requested fields and click
+			"register"</p>
+
+
+		<p>Name:</p>
+
+		<p>
+			<input type="text" name="name" required />                   <!-- Field for the name-->
+		</p>
+
+		<p>Password:</p>
+
+		<p>
+			<input type="password" name="pass" required />					<!-- Field for the password input-->
+		</p>
+		
+		<!--- The "required" attribute prevents the form from being submitted if the field is empty 
+				<form action="/action_page.php" method="post">
+				<input type="text" name="fname" required>
+				<input type="submit" value="Submit">
+				</form> 
+				 Here is an example of teh code --->
+		
+		<p>Email:</p>
+
+		<p>
+			<input type="email" name="email" />          				<!-- Field for an email input-->
+		</p>	
+
+		<p>PostalRegion:</p>
+
+		<p>
+			<select name="PostalRegion">
+				<option>Africa</option>
+				<option>Australia</option>
+				<option>Asia</option>
+				<option>Europe</option>
+				<option>North America</option>
+				<option>South America</option>
+			</select>
+		</p>
+
+
+
+		<p><input type="submit" value="REGISTER" /></p>
+			
+
+	</form>
+	<!-- end of form-->
+	
+	
+	
+	
+	<p>CONTACT US  &#9743;  XXX-XXX-XXXX</p>              <!-- Special symbol - white telephone picture-->
+    <p><a href="mailto:so@ex.com">Send email</a></p>
+    <p> &copy Hanna Kukhta Production</p> 					<!-- Special symbol -- copywrite symbol-->
+ 
+
+<!-- 
+To develop an e-shop I will need to add more pages, for example:
+ALL PRODUCTS
+MY ACCOUNT
+OUR GUARANTEE
+RESOURCE GUIDE
+SAFE SHOPPING
+ABOUT US
+PRIVACY POLICY
+BLOG
+DELIVERY / RETURNS / COLLECTIONS
+TESTIMONIALS
+CONTACT US -->
+  
+    
+</div>
+</body>
+</html>

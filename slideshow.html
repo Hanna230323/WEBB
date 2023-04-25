@@ -1,0 +1,84 @@
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="stylesheet" href="styles_new.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+  <meta name="description" content="Slideshow Art Shop">
+  <meta name="keywords" content="slideshow, art shop, artist, landscape, nature, pictures, paints ">
+  <meta name="author" content="Hanna Kukhta">
+<title>Slideshow</title> 
+
+</head>
+<body>
+<div class="bg-image"></div>
+<div class="bg-text">
+
+<h1>Welcome to Whales Tales Art Shop!</h1>
+		
+<p> <button onclick="document.location='index.html'"> Home</button>						<!-- Home page -->
+<button onclick="document.location='login.html'"> Login</button>						<!-- Login page -->
+<button onclick="document.location='registration.html'"> Registration</button>			<!-- Registration page -->
+<button onclick="document.location='ShopDisplay.html'"> Gallery</button>				<!-- Gallery / Shop display page -->
+<button onclick="document.location='slideshow.html'"> Slideshow</button></p>			<!-- Slideshow page -->
+
+<h2>Pictures Slideshow</h2>
+<p>New great picture every 3 seconds:</p>
+
+<!-- The code of the slideshow-->
+<div class="slideshow-container">
+
+<div class="mySlides fade">                   <!-- The code for the first picture to appear-->
+  <div class="numbertext">1 / 3</div>
+  <img src="Berries.jpg" style="width:100%">
+  <div class="text">Berries</div>
+</div> 												<!-- The end of the code-->
+
+<div class="mySlides fade">							<!-- The code for te 2nd picture-->
+  <div class="numbertext">2 / 3</div>
+  <img src="Lilias.jpg" style="width:100%">
+  <div class="text">Lilias</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="poppies.jpg" style="width:100%">
+  <div class="text">Poppies</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<!-- Java script code -->
+
+<script>    
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+</div>
+</body>
+</html> 
